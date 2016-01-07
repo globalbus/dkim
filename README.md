@@ -2,9 +2,9 @@
 
 Fork of old unmaintained project from [Agitos.de](http://www.agitos.de/dkim-for-javamail/)
 
-Code was cleaned and prepared to use with spring framework mail implementation. You can use DKIMJavaMailSenderProxy to replace default JavaMailSenderImpl.
+Code was cleaned and prepared to use with spring framework mail implementation. You can use `DKIMJavaMailSenderProxy` to replace default `JavaMailSenderImpl`.
 
-Simple transparent configuration for JavaMailSender. privateKey is resource filename in this case
+Simple transparent configuration for `JavaMailSender`. privateKey is resource filename in this case
 ```
 @Configuration
 @PropertySources(value = { @PropertySource("classpath:/dkim.config"), @PropertySource("classpath:/smtp.cred") })
@@ -71,7 +71,8 @@ Form more information about generating keys, see ORIGINAL_README.md
 1. Generate keys
 2. Add DKIM public key as an TXT record for your domain.
 3. Send email from your domain to server, who checks DKIM, in example to GMail. If you see Authentication results like that, it works!
-```Authentication-Results:
+```
+Authentication-Results:
        dkim=pass
 ```
-4. Don't forget about 
+4. Don't forget about SPF TXT Record
