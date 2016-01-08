@@ -71,7 +71,8 @@ Form more information about generating keys, see ORIGINAL_README.md
 1. Generate keys
 2. Add DKIM public key as an TXT record for your domain.
 3. Send email from your domain to server, who checks DKIM, in example to GMail. If you see Authentication results like that, it works!
-```Authentication-Results:
+```
+Authentication-Results:
        dkim=pass
 ```
-4. Don't forget about SPF Record!
+4. Don't forget about SPF TXT Record!
