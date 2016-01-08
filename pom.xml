@@ -3,9 +3,30 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>info.globalbus</groupId>
 	<artifactId>dkim</artifactId>
+	<name>DKIM for JavaMail</name>
 	<version>1.0</version>
 	<packaging>jar</packaging>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>globalbus</id>
+			<name>Jan Filipski</name>
+			<email>jfilipski@gmail.com</email>
+			<url>http://globalbus.info/</url>
+			<roles>
+				<role>author</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
 	<properties>
+		<github.global.server>github</github.global.server>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
@@ -37,27 +58,10 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<version>0.12</version>
-				<configuration>
-					<message>Creating site for ${project.version}</message>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<phase>site</phase>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
-	<organization>
-		<name>Jan Filipski (globalbus)</name>
-		<url>globalbus.info</url>
-	</organization>
-	<name>DKIM for JavaMail</name>
+	<scm>
+		<url>scm:git:git@github.com:globalbus/dkim.git</url>
+	</scm>
+	<description>Java implementation of DKIM email signing.</description>
 </project>
